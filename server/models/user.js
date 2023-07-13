@@ -3,18 +3,23 @@ const userSchema=mongoose.Schema({
     name:{
         type:String,required:true,trim:true},
 
-    email:{type:String,required:true,trim:true,
-        vadidate:{validator:(value)=>{
-            const emailRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-            return value.match(emailRegex);},
-            message:()=>`enter atleast a number  and a special character  `},
-    },
-    password:{type:String,required:true,
-        vadidate:{validator:(value)=>{
-            const passwordRegex=/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            return value.match(passwordRegex);},
-            message:props=>`${props.value} is not a valid email`},
-},
+        email: {
+            required: true,
+            type: String,
+            trim: true,
+            validate: {
+              validator: (value) => {
+                const re =
+                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                return value.match(re);
+              },
+              message: "Please enter a valid email address",
+            },
+          },
+          password: {
+            required: true,
+            type: String,
+          },
     address:{type:String,
         default:"",
             },
