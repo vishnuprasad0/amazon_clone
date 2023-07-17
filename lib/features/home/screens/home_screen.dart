@@ -12,7 +12,15 @@ class HomeScreen extends StatelessWidget {
     print(user.toJson());
 
     return Scaffold(
-      body: Center(child: Text(user.toJson())),
+      body: Padding(
+        padding: const EdgeInsets.all(40.0),
+        child: Text(
+          'user data from db and jwt token from server \n\n "jwt_token: "  ${user.token}\n\n'
+          ' "email"  : ${user.email}\n\n'
+          '"name": ${user.name}',
+          style: const TextStyle(fontSize: 22),
+        ),
+      ),
     );
   }
 }

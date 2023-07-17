@@ -12,7 +12,7 @@ enum Auth {
 class AuthScreen extends StatefulWidget {
   static const String routeName = '/auth-screen';
   const AuthScreen({Key? key}) : super(key: key);
-  
+
   @override
   State<AuthScreen> createState() => _AuthScreenState();
 }
@@ -165,6 +165,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         const SizedBox(height: 10),
                         CustomButton(
                           text: 'Sign In',
+                          color: Colors.orange,
                           onTap: () {
                             if (_signInFormKey.currentState!.validate()) {
                               signInUser();
