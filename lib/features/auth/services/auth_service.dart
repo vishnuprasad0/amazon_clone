@@ -115,7 +115,6 @@ class AuthService {
       );
 
       var response = jsonDecode(tokenRes.body);
-      print(response);
 
       if (response == true) {
         http.Response userRes = await http.get(
