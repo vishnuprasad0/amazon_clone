@@ -1,4 +1,6 @@
 import 'package:amazon_clone/constants/global_variables.dart';
+import 'package:amazon_clone/features/account/widgets/below_appbar.dart';
+import 'package:amazon_clone/features/account/widgets/top_buttons.dart';
 import 'package:flutter/material.dart';
 
 String routeName = 'account-screen';
@@ -47,6 +49,15 @@ class AccountScreen extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      body: const Column(
+        children: [
+          BelowAppBar(),
+          SizedBox(
+            height: 10,
+          ),
+          TopButton()
+        ],
       ),
     );
   }
