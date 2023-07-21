@@ -12,21 +12,39 @@ class AccountButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      height: 40,
-      width: 150,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey, width: 0),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: OutlinedButton(
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        height: 40,
+        width: 150,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: TextButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+              Colors.black12.withOpacity(0.09),
+            ),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50),
+                side: BorderSide(
+                  color: Colors.black12.withOpacity(0.09),
+                  width: 1.0,
+                ),
+              ),
+            ),
+          ),
           onPressed: onTap,
           child: Text(
             text,
             style: const TextStyle(
-                color: Colors.black, fontWeight: FontWeight.normal),
-          )),
+              color: Colors.black,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

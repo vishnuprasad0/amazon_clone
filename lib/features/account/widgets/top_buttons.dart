@@ -14,7 +14,6 @@ class _TopButtonState extends State<TopButton> {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AccountButton(
               text: 'Your Orders',
@@ -31,7 +30,6 @@ class _TopButtonState extends State<TopButton> {
           ],
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AccountButton(
               text: 'Log Out',
