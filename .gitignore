@@ -44,3 +44,4 @@ app.*.map.json
 /android/app/release
 android/lib/constants/global_variables.dart
 ```
+lib/constants/global_variables.dart
