@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../constants/global_variables.dart';
 import '../../../provider/user_provider.dart';
+import '../widgets/address_box.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -12,6 +13,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +91,10 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [],
+          children: const [
+            AddressBox(),
+            
+          ],
         ),
       ),
     );
