@@ -1,3 +1,4 @@
+import 'package:amazon_clone/features/home/widgets/deal_of_day.dart';
 import 'package:amazon_clone/features/home/widgets/top_categories.dart';
 import 'package:flutter/material.dart';
 import '../../../constants/global_variables.dart';
@@ -97,6 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
             TopCategories(),
             SizedBox(height: 10),
             CarouselImage(),
+            DealOfDay()
           ],
         ),
       ),
