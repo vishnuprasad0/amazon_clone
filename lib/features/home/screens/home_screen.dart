@@ -1,9 +1,8 @@
 import 'package:amazon_clone/features/home/widgets/top_categories.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../../../constants/global_variables.dart';
-import '../../../provider/user_provider.dart';
 import '../widgets/address_box.dart';
+import '../widgets/carousel_images.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -95,7 +94,9 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 10,
             ),
-            TopCategories()
+            TopCategories(),
+            SizedBox(height: 10),
+            CarouselImage(),
           ],
         ),
       ),

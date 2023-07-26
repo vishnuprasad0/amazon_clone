@@ -19,6 +19,7 @@ dependencies:
   shared_preferences: ^2.0.5
   provider: ^5.0.0
   badges: ^3.1.1
+  carousel_slider: ^4.2.1
 
 
 dev_dependencies:
