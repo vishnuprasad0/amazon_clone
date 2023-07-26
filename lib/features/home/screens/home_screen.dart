@@ -1,3 +1,4 @@
+import 'package:amazon_clone/features/home/widgets/top_categories.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../constants/global_variables.dart';
@@ -13,8 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,11 +88,14 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
-          children: const [
+          children: [
             AddressBox(),
-            
+            SizedBox(
+              height: 10,
+            ),
+            TopCategories()
           ],
         ),
       ),
